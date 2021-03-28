@@ -1,0 +1,74 @@
+:root{
+    --first: rgb(12, 10, 26);
+    --second: rgb(255, 255, 255);
+    --third: rgb(167, 171, 240);
+    --forth: rgb(44, 40, 70);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: var(--third);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.calculator{
+    width: 400px;
+    background: var(--first);
+}
+.calculator .screen{
+    height: 100px;
+    background: var(--forth);
+    padding: 10px;
+    color: var(--second);
+}
+.calculator .screen .prev{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+    font-weight: 200;
+}
+.calculator .screen .result{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+    font-size: 35px;
+    font-weight: 800;
+}
+.calculator .buttons{
+    height: 400px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.calculator .buttons .nums{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.calculator .buttons .operators{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;  
+}
+.calculator .buttons button{
+    height: 100%;
+    background: var(--first);
+    color: var(--second);
+    font-size: 18px;
+    cursor: pointer;
+    transition: .5s;
+    border: 1px solid var(--third);
+    outline: none;
+}
+.calculator .buttons button:hover{
+    filter: brightness(1.7);
+}
